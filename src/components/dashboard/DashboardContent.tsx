@@ -22,13 +22,15 @@ import CourseCard from "./CourseCard";
 
 interface DashboardContentProps {
   userRole?: "admin" | "instructor" | "learner";
+  className?: string;
 }
 
 const DashboardContent: React.FC<DashboardContentProps> = ({
   userRole = "learner",
+  className = "",
 }) => {
   return (
-    <div className="p-6 bg-background w-full">
+    <div className={`p-6 bg-background w-full ${className}`}>
       <div className="flex flex-col space-y-6">
         {/* Welcome Section */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
